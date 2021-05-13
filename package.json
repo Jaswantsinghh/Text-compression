@@ -1,0 +1,25 @@
+{
+  "name": "text-compression",
+  "version": "1.0.0",
+  "description": "A text compression web app which compress text file using huffmann coding",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaswantsinghh/Text-compression.git"
+  },
+  "keywords": [
+    "text-compression",
+    "huffmann",
+    "coding"
+  ],
+  "author": "Jaswant Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaswantsinghh/Text-compression/issues"
+  },
+  "homepage": "https://github.com/Jaswantsinghh/Text-compression#readme"
+}
