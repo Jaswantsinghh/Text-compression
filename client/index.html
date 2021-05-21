@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Compression</title>
+</head>
+<body>
+    <h1 style="text-align: center;">TEXT COMPRESSOR</h1>
+    <form action="/" enctype="multipart/form-data" method="POST">
+        <fieldset>
+            <h2>COMPRESS</h2>
+            <input id='enterFile' name="file" type="file" accept=".txt" required>
+            <button>Submit</button>
+        </fieldset>
+    </form>
+    <form action="/download" method="GET">
+        <fieldset>
+            <h2>DOWNLOAD</h2>
+            <button>Download</button>
+            <p id="txt"></p>
+        </fieldset>
+    </form>
+</body>
+<script src="index.js"></script>
+</html>

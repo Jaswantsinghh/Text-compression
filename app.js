@@ -1,12 +1,41 @@
-let http = require('http');
-let fs = require('fs');
-let server =http.createServer(function(req,res)
-{
- console.log('request was made :' + req.url);
- res.writeHead(200, {'Content-Type': 'text/html'});
- let myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
- myReadStream.pipe(res);
-});
+const http = require('http');
+const fs = require('fs');
+const express = require('express');
+const upload = require('express-fileupload');
+const formidable = require('formidable');
 
-server.listen(3000, '127.0.0.1');
-console.log('hey brats, now listening to port 3000');
+const app = express();
+
+app.use(upload());
+
+app.get('/',(req,res)=>
+{
+    res.sendFile(__dirname+'/client/index.html');
+})
+
+
+app.post('/', (req,res) =>{
+    if(req.files) {
+        let file = req.files.file;
+        let filename = file.name;
+        file.mv('./uploads/sample.txt', function (err)
+        {
+            if(err)
+            {
+                res.send(err);
+            }
+            else
+            {
+                res.send('file uploaded');
+            }
+
+        })
+
+    }
+    else
+    {
+        console.log("File not found");
+    }
+})
+
+app.listen(8080);
