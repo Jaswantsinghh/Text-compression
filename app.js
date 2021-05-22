@@ -26,7 +26,7 @@ app.post('/', (req,res) =>{
             }
             else
             {
-                res.send('file uploaded');
+                res.download('./downloads/compressed_file.txt','compressed.txt');
             }
 
         })
@@ -37,5 +37,7 @@ app.post('/', (req,res) =>{
         console.log("File not found");
     }
 })
+
+
 
 app.listen(8080);
