@@ -21,7 +21,7 @@ app.post('/', (req,res) =>{
         let file = req.files.file;
         let filename = file.name;
         let buf = file.data.toString('utf8');
-        
+        let compressed_text = compress.comp(buf);
         file.mv('./uploads/sample.txt', function (err)
         {
             if(err)
