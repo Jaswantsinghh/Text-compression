@@ -4,7 +4,7 @@ const express = require('express');
 const upload = require('express-fileupload');
 const formidable = require('formidable');
 const app = express();
-
+const compress = require('./modules/compression.js')
 
 
 
@@ -21,7 +21,7 @@ app.post('/', (req,res) =>{
         let file = req.files.file;
         let filename = file.name;
         let buf = file.data.toString('utf8');
-        console.log(buf);
+        
         file.mv('./uploads/sample.txt', function (err)
         {
             if(err)
