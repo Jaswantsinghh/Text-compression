@@ -3,8 +3,10 @@ const fs = require('fs');
 const express = require('express');
 const upload = require('express-fileupload');
 const formidable = require('formidable');
-
 const app = express();
+
+
+
 
 app.use(upload());
 
@@ -18,6 +20,8 @@ app.post('/', (req,res) =>{
     if(req.files) {
         let file = req.files.file;
         let filename = file.name;
+        let buf = file.data.toString('utf8');
+        console.log(buf);
         file.mv('./uploads/sample.txt', function (err)
         {
             if(err)
