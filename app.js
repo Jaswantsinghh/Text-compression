@@ -14,7 +14,7 @@ app.get('/',(req,res)=>
 {
     res.sendFile(__dirname+'/client/index.html');
 })
-
+    
 
 app.post('/', (req,res) =>{
     if(req.files) {
@@ -22,6 +22,7 @@ app.post('/', (req,res) =>{
         let filename = file.name;
         let buf = file.data.toString('utf8');
         let compressed_text = compress.comp(buf);
+        console.log(compressed_text);
         file.mv('./uploads/sample.txt', function (err)
         {
             if(err)
@@ -34,7 +35,6 @@ app.post('/', (req,res) =>{
             }
 
         })
-
     }
     else
     {
