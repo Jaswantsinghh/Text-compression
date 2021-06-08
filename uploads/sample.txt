@@ -1,5 +1,262 @@
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+-> What iS DAD instruction?
+ DAD stands for Double Add. It is an instruction type in 8085 mp.
+ It is 1-byte (8 bit) instruction.
+ It can do 16 bit additions also in 8-bit mp. 
+ this instruction easily takes double the time needed to add two 8-bit numbers.
+ registers - BC,DE,HL.
 
+-> Memory Reference instructions
+are isntructions which are in the habit to construct a reference to the memory and
+consent to a program to have an access to the commanded data and 
+that states as to from where the data is stashed away.
+* Specifies 12-bit address, 3-bit opcode and 1-bit addressing mode for direct and indirect addressing.
+
+-> What is virtual memory
+feature of an operating system that enables a computer to be able to compensate shortages
+ of physical memory by transferring pages of data from RAM to disk storage.
+
+-> What is IR register?
+the instruction register (IR) or current instruction register (CIR) is the part of a CPU's control unit
+ that holds the instruction currently being executed or decoded.
+16 bits (2-byte)
+
+-> Signals used in EDI transfers?
+
+->instruction used to add 16 bit data
+DAD instructions
+
+-> why DMA is faster than other data transfer techniques?
+The direct memory access or DMA mode of data transfer is faster amongst all the mode of data transfer .
+ In this mode ,the device may transfer data directly to/from memory without any interference from the cpu .
+The device request the cpu through a DMA controller to hold its data ,
+address and control bus so that the device may transfer data directly to or from memory.
+
+-> what is address bus?
+The address bus allows the CPU to send the address to RAM, and the data bus allows the actual data transfer to the CPU.
+
+-> RAR instructions?
+RAR - Rotate Accumulator Right
+ It rotates the Accumulator contents to the right by 1-bit position.
+
+-> what is accumulator?
+An accumulator is a 18 bit register for short-term, intermediate storage of arithmetic 
+and logic data in a computer's CPU.
+
+-> vectored interupts?
+ a vectored interrupt is an I/O interrupt that tells the part of the computer that 
+handles I/O interrupts at the hardware level that a request for attention from an I/O device 
+has been received and and also identifies the device that sent the request.
+
+-> Use of flag
+Flags are a modified kind of register that record the condition of a microprocessor's calculation.
+For example, a "zero status" flag is activated only when the microprocessor's calculation concludes
+ with a "zero" status.
+
+-> drawback of registers?
+The main disadvantage of registers is that they're finite.
+If a program has to manipulate more data than can fit in these registers, then it needs to use cache
+ or main memory instead, which slows things down.
+
+-> cold boot / Hard boot
+To perform a cold boot (also called a "hard boot") means to start up a computer that is turned off.
+
+-> ADI instructions?
+ADI - ADd Immediate to Accumulator (8-bit / 1-byte)
+The result of addition will be stored in the Accumulator.
+
+-> cache memory
+Cache memory is an extremely fast memory type that acts as a buffer between RAM and the CPU.
+It holds frequently requested data and instructions so that they are immediately available to the CPU when needed
+
+-> implicit addressing mode
+In implied addressing mode, the operands are specified implicitly in the definition of the instruction .
+ All the instructions which reference registers that use an accumulator are implied mode instructions .
+ Zero address instructions in a stack organised computer are also implied mode instructions .
+
+-> What are intrupts?
+An interrupt is a condition that halts the microprocessor temporarily to work on a different task
+ and then return to its previous task. Interrupt is an event or signal that request to attention of CPU.
+ This halt allows peripheral devices to access the microprocessor.
+TYPES(hardware)-
+*INTR
+*RST 7.5
+*RST 6.5
+*RST 5.5
+*TRAP
+TYPES(software)
+*RST 0
+*RST 1
+*RST 2
+*RST 3
+*RST 4
+*RST 5
+*RST 6
+*RST 7
+
+CATEGORIES-
+1. Hardware intrupts - caused by any peripheral device by sending a signal through a specified pin
+ to the microprocessor
+2. Software intrupts - inserted within the program to generate interrupts.
+
+
+-> ANA instructions
+ANA - And Accumulator
+It performs AND operation of two numbers.
+The AND operation performs bit-wise AND of the two operands.
+ If X is a bit of Accumulator, and Y is a bit of the other operand in the same bit position,
+ the AND operation is performed as per the following truth table.
+
+-> priority interupt?
+A priority interrupt is a system which decides the priority at which various devices, which
+ generates the interrupt signal at the same time, will be serviced by the CPU.
+
+-> Parity flag?
+parity flag indicates if the numbers of set bits is odd or even in the binary representation
+ of the result of the last operation.
+
+-> STA Instructions
+STA stands for Store Accumulator contents in memory
+In this instruction Accumulator 8-bit content will be stored to memory location
+whose 16-bit address is indicated in the instruction as a16. 
+This instruction uses absolute addressing for specifying the destination.
+
+-> Difference between 8085 vs 8086
+* 8085 is 8-bit microprocessor and 8086 is enhanced version of 8086 and is 16-bir processor.
+* 8085 uses nearly 6500 transistors amd 8086 uses nearly 29000 transistors
+ 
+-> Applications of microprocessor
+* RADAR
+* SONAR
+* Mobile phones
+
+-> Different addressing mode
+* Immediate mode - The operand is an immediate value is stored explicitly in the instruction. (ex SPIM)
+* Index mode - The address of the operand is obtained by adding to the contents of the general register
+ (called index register) a constant value.(Ex SPIM/SAL)
+* Register mode - The name (the number) of the CPU register is embedded in the instruction.
+* Direct mode - The address of the operand is embedded in the instruction code.
+
+-> ALU and its functionalities
+ALU - Arithematic Logical Unit is a digital circuit used to perform arithmetic and logic operations.
+The ALU performs simple addition, subtraction, multiplication, division, and logic operations, such as OR and AND.
+
+-> Name diff flags of 8085 microp.
+* Carry flag
+* Auxillary flag 
+* Sign flag
+* Zero flag
+* Parity flag
+
+-> Register vs memory
+Registers are the smallest data holding elements that are built into the processor itself.
+These are the memory locations that are directly accessible by the processor.
+
+
+-> Cache memory vs main memory
+Cache is a smaller and fast memory component in the computer which is inserted between
+ the CPU and the main memory. To make this arrangement effective.
+ The cache needs to be much faster than main memory.
+CPU reads Cache Memory data before reading main memory.
+
+-> What are registers?
+A processor register (CPU register) is one of a small set of data holding places
+ that are part of the computer processor. A register may hold an instruction,
+ a storage address, or any kind of data (such as a bit sequence or individual characters).
+
+-> Mapping? Associative memory?
+The transformation of data from main memory to cache memory is called mapping. 
+* Associative mapping
+The associative memory stores both address and data
+The address value of 15 bits is 5 digit octal numbers
+ and data is of 12 bits word in 4 digit octal number.
+ A CPU address of 15 bits is placed in argument register and the associative memory
+ is searched for matching address.
+
+* Direct Mapping
+The CPU address of 15 bits is divided into 2 fields.
+ In this the 9 least significant bits constitute the index field and the remaining 6 bits 
+constitute the tag field. 
+The number of bits in index field is equal to the number of address bits required to access cache memory.
+
+* Set Associative mapping
+In this we can store two or more words of memory under the same index address.
+ Each data word is stored together with its tag and this forms a set.
+
+-> What is Program Counter register and functionalities?
+A program counter is a register in a computer processor that contains the address
+ (location) of the instruction being executed at the current time.
+
+-> What is ALE signal?
+ALE - Address Enable Latch
+is the control signal which is nothing but a positive going pulse generated when a new operation
+ is started by microprocessor.
+
+-> What is LDA instruction and no of byte?
+LDA - Load Accumulator 
+ LDA is for copying data from memory location to accumulator
+*3 bytes
+
+-> What are features of 8085 mp?
+* It is an 8-bit microprocessor
+* It operates on a single +5V power supply connected at Vcc
+*  It operates on clock cycle with 50% duly cycle.
+
+-> What are maskable and non maskable interrupts?
+*Maskable interrupt is a hardware Interrupt that can be disabled or ignored by the instructions of CPU.
+*A non-maskable interrupt is a hardware interrupt that cannot be disabled or ignored by the instructions of CPU.
+
+-> What is DMA?
+DMA - direct memory access
+ is a method of transferring data from the computer's RAM to another part of the computer without processing it
+ using the CPU
+Ex: PCI controller
+
+-> What is auxillary carry flag?
+* This flag is used in BCD (Binary-coded Decimal) operations.
+* The status of this flag is updated for every arithmetic or logical operation performed by ALU.
+
+-> LXI instructions and byte ,adressing mode used?
+this instruction to load data from memory location using the memory address,
+ which is stored in the register pair rp
+bytes - 2 bytes (16 bits)
+addressing mode-  Immediate addressing mode
+
+-> instruct used to complement content of  accumulator
+CMA
+
+-> MVI instructs
+MVI - Move immediate
+With this instruction,we can load a register with an 8-bitsor 1-Bytevalue.
+Addressing mode- immediate
+Bytes - 2
+
+-> instruct cycle
+A program residing in the memory unit of a computer consists of a sequence of instructions.
+ These instructions are executed by the processor by going through a cycle for each instruction.
+
+->risc vs cisc
+RISC - Reduced instruction set computer
+CISC -Complex instruction set computer
+* RISC requires more no of register, cisc ledd no of registers
+* RISC- An instruction execute in a single clock cycle, cisc - Instruction takes more than one clock cycle
+* RISC-An instruction fit in one word , CISC- Instructions are larger than the size of one word
+
+-> imp of dma
+The direct memory access or DMA mode of data transfer is faster amongst all the mode of data transfer 
+
+-> disadvantage of dma
+* DMA transfer requires a DMA controller to carry out the operation, hence more expensive system
+* synchronization mechanisms must be provided in order to avid accessing non-updated information from RAM.
+* DMA can lead to cache coherency problems.
+
+-> sub routine?
+The subroutine in the microprocessor is a sequence of program instructions code that performs a particular task
+
+-> bootstrap loader?
+A Bootstrap Loader (BSL) is a small program which can be activated immediately after a
+ microcontroller has been powered up,
+ in order to load and execute another program in a well defined manner.
+
+-> what is interface?
+an interface is a shared boundary across which two or more separate components of a 
+computer system exchange information.
